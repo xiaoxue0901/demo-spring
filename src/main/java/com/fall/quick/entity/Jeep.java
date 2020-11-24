@@ -1,4 +1,4 @@
-package com.fail.quick.entity;
+package com.fall.quick.entity;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

@@ -1,4 +1,4 @@
-package com.fail.quick.dao;
+package com.fall.quick.dao;
 
 import org.springframework.stereotype.Repository;
 

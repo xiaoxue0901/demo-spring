@@ -1,11 +1,11 @@
-package com.fail.quick;
+package com.fall.quick;
 
-import com.fail.quick.dao.DogDao;
-import com.fail.quick.entity.Cat;
-import com.fail.quick.entity.CatFactory;
-import com.fail.quick.entity.Dog;
-import com.fail.quick.entity.Jeep;
-import com.fail.quick.service.UserService;
+import com.fall.quick.dao.DogDao;
+import com.fall.quick.entity.Cat;
+import com.fall.quick.entity.CatFactory;
+import com.fall.quick.entity.Dog;
+import com.fall.quick.entity.Jeep;
+import com.fall.quick.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

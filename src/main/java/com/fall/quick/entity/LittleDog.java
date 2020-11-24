@@ -1,4 +1,4 @@
-package com.fail.quick.entity;
+package com.fall.quick.entity;
 
 /**
  * @author xql132@zcsmart.com

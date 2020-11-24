@@ -1,8 +1,8 @@
-package com.fail.quick.service;
+package com.fall.quick.service;
 
-import com.fail.quick.dao.DogDao;
-import com.fail.quick.entity.Cat;
-import com.fail.quick.entity.Dog;
+import com.fall.quick.dao.DogDao;
+import com.fall.quick.entity.Cat;
+import com.fall.quick.entity.Dog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

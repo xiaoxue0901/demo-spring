@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--创建一个对象dog, 对象名称是:dog, 类名用class表示, 加上包名-->
+    <bean id="dog" class="com.fall.ioc.beans.Dog">
+        <!--给有name和price成员变量赋值-->
+        <property name="name" value="花花"></property>
+        <property name="price" value="5500.23"></property>
+    </bean>
+
+    <bean id="dog2" class="com.fall.ioc.beans.Dog">
+        <!--给有name和price成员变量赋值-->
+        <property name="name" value="哈士奇"></property>
+        <property name="price" value="3"></property>
+    </bean>
+
+    <!-- 创建一个对象user 对象名称就是user 类名用class内容表示 要加上包名 -->
+    <!-- scope: singleton或者prototype;  scope设置成prototype表示每次调用都会生成一个新的对象 可以打印hashcode查看 -->
+    <bean id="user" class="com.fall.ioc.beans.User" scope="prototype" init-method="init" destroy-method="destory">
+        <!--构造函数的参数配置-->
+        <constructor-arg name="name" value="小薛"></constructor-arg>
+        <!--基本类型用value, 引用类型用ref表示-->
+        <constructor-arg name="dog" ref="dog"></constructor-arg>
+        <constructor-arg name="dogList">
+            <list>
+                <!--可以在list中直接创建一个对象, 但是外部无法使用-->
+                <bean id="dog2" class="com.fall.ioc.beans.Dog">
+                    <property name="name" value="小黑"></property>
+                    <property name="price" value="0"></property>
+                </bean>
+            </list>
+        </constructor-arg>
+        <property name="age" value="30"></property>
+    </bean>
+
+    <bean name="user2" class="com.fall.ioc.beans.User" init-method="init" destroy-method="destory2">
+        <!--通过属性的set方法给对象赋值-->
+        <property name="name" value="小雪"></property>
+        <property name="age" value="10"></property>
+        <property name="dogSet">
+            <set>
+                <ref bean="dog"/>
+                <ref bean="dog2"/>
+            </set>
+        </property>
+        <!--给map类型的实例赋值-->
+        <property name="dogMap">
+            <map>
+               <entry key="1" value-ref="dog"/>
+                <entry key="2">
+                    <ref bean="dog2"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="bird" class="com.fall.ioc.beans.Bird">
+        <property name="name" value="小鸟"></property>
+    </bean>
+</beans>
