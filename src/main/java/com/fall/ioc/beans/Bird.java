@@ -12,4 +12,7 @@ import lombok.Data;
 public class Bird {
     private String name;
 
+    public void init() {
+        System.out.println("bird init==========");
+    }
 }
