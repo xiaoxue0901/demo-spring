@@ -12,4 +12,21 @@ import lombok.Data;
 public class Bird {
     private String name;
 
+    private User user;
+
+    public Bird(User user) {
+        this.user = user;
+    }
+
+    public Bird(String name) {
+        this.name = name;
+    }
+
+    public void init() {
+        System.out.println("bird start");
+    }
+
+    public void destory() {
+        System.out.println("bird dead");
+    }
 }
