@@ -37,9 +37,7 @@
       <artifactId>lombok</artifactId>
       <version>1.18.12</version>
     </dependency>
-
     <!--引入打印日志的包 end-->
-
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>fastjson</artifactId>
