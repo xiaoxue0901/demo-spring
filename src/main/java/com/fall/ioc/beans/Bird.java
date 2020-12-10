@@ -14,6 +14,9 @@ public class Bird {
 
     private User user;
 
+    public Bird() {
+    }
+
     public Bird(User user) {
         this.user = user;
     }

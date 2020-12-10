@@ -3,7 +3,6 @@ package com.fall;
 import static org.junit.Assert.assertTrue;
 
 import com.fall.ioc.config.MyConfig;
-import com.sun.xml.internal.xsom.parser.AnnotationContext;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
