@@ -23,4 +23,10 @@ public class RoleServiceProxyTest {
         int result = proxy.saveRole();
         Assert.assertEquals(1, result);
     }
+
+    @Test
+    public void name() {
+        Integer i = Integer.valueOf(1);
+        int i2 =  i.intValue();
+    }
 }
