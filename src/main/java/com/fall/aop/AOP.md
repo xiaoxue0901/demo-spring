@@ -210,3 +210,23 @@ public class CglibProxyFactoryTest {
 
 }
 ```
+
+第一节:
+jdk和cglib动态代理分析--运行时产生代理对象
+    jdk产生代理对象的步骤-- 由代理对象工厂去
+    1. 针对目标类的接口去使用Java api编写代理类的代码(.java文件)
+    2. 编译java代码成class文件
+    3. 使用ClassLoader去加载class文件到jvm中
+    4. 通过class对象去反射生成代理对象
+    代理对象的主要工作是委托给InvocationHandler类(增强器)去处理
+    
+spring Aop 原理介绍
+
+AOP联盟定义的一些类
+
+符合AspectJ表达式: excution()
+AbstractAutoProxyCreator
+AspectJAwareAdvisorAutoProxyCreator
+
+TargetSource
+AopFactory
