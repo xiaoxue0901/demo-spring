@@ -11,6 +11,6 @@ public interface Performance {
      * 执行切点的表达式:
      * execution(* com.fall.aop.Performance.perform(..))
      */
-    public void perform();
+     void perform();
 
 }

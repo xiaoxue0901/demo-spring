@@ -1,16 +1,17 @@
 package com.fall;
 
+import com.fall.ioc.config.JavaConfig;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * Hello world!
  */
+
 @Slf4j
 public class App {
     public static void main(String[] args) {
-        // 基于xml方法创建bean, 并从ioc中取出bean
-        // xmlBean();
-
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
     }
 
 }
