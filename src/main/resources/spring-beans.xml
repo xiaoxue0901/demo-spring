@@ -58,5 +58,16 @@
 
     <bean id="bird" class="com.fall.ioc.beans.Bird">
         <property name="name" value="小鸟"></property>
+        <!-- 如果是Properties集合的方式, 注入的配置如下-->
+        <!--<property name="pro">-->
+        <!--    <props>-->
+        <!--        <prop key="uname">root</prop>-->
+        <!--        <prop key="pass">123</prop>-->
+        <!--    </props>-->
+        <!--</property>-->
     </bean>
+
+
+
+
 </beans>

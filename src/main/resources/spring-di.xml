@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--1. 使用构造函数的方式给属性赋值的要求: 类中需要提供一个对应参数列表的构造函数, 涉及标签
+    constructor-arg:
+        * index: 指定参数在构造函数参数列表中的索引位置
+        * name: 指定函数在构造函数中的名称
+        * value: 它能赋值的值是基本数据类型和string类型
+        * ref: 他能赋值的是其他bean类型, 也就是说, 必须得是在配置文件中配置过的bean
+    -->
+    <bean id="userService4" class="com.fall.ioc.xml.UserServiceImpl">
+        <constructor-arg name="id" value="1"/>
+        <constructor-arg name="name" value="wangwu"/>
+    </bean>
+
+    <!--2. set方式注入
+    需要配置bean标签的子标签property
+    需要类中有指定的setter方法
+    -->
+    <bean id="userService5" class="com.fall.ioc.xml.UserServiceImpl">
+        <property name="id" value="2"/>
+        <property name="name" value="历史"/>
+    </bean>
+</beans>

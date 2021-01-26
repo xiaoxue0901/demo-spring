@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--1. 使用默认无参构造器实例化bean-->
+    <bean id="userService" class="com.fall.ioc.xml.UserServiceImpl"/>
+
+    <!--2. 使用静态工厂创建类对象, 并存入spring容器中
+        id属性:指定bean的id, 用于从容器中读取
+        class属性: 指定静态工厂的全限定类名
+        factory-method属性: 指定生产对象的静态方法
+    -->
+    <bean id="userService2" class="com.fall.ioc.xml.StaticFactory" factory-method="createUserService"/>
+
+    <!--3. 实例工厂: 先把工厂的创建交给spring来管理, 然后再使用工厂的bean来调用类里面的方法-->
+    <bean id="instanceFactory" class="com.fall.ioc.xml.InstanceFactory"/>
+    <!--factory0-bean属性: 用于指定实例工厂的bean的id, factory-method:用来指定实例工厂中创建对象的方法-->
+    <bean id="userService3" factory-bean="instanceFactory" factory-method="createUserService"/>
+</beans>
