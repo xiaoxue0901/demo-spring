@@ -1,5 +1,6 @@
 package com.fall.aop;
 
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 
 /**
@@ -28,9 +29,11 @@ public class AudienceAround {
             System.out.println("Silencing cell phones");
             System.out.println("Taking seats");
             System.out.println("CLAP!!!");
-            point.process();
+            point.proceed();
         } catch (Exception e) {
             System.out.println("Demaing a refund");
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
         }
     }
 }
